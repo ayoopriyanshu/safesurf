@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SafeSurf</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        width: 320px;
+        height: 350px;
+        margin: 0;
+        padding: 10px;
+        font-family: monospace;
+        background-image: url(/img/giphy-ezgif.com-webp-to-gif-converter.gif);
+        background-size: 270%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      #head {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px;
+        font-family: monospace;
+        color: rgb(0, 0, 0);
+        background-color: white;
+        align-items: center;
+        margin-left: 70px;
+        margin-right: 70px;
+        padding-bottom: 2px;
+        border-radius: 10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 200px;
+      }
+      label {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      textarea {
+        height: 100px;
+        resize: none;
+        font-size: 16px;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-family: monospace;
+      }
+      p {
+        text-align: center;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      #spinner {
+        display: none;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1
+      id="head"
+      style="font-family: lobster; font-size: 30px; font-weight: 400"
+    >
+      SafeSurf
+    </h1>
+    <form id="form">
+      <label
+        for="text"
+        style="color: white; background-color: black; margin-right: 120px"
+        >Enter the website URL:</label
+      >
+      <textarea id="text"></textarea>
+      <button id="submit-button">Check</button>
+    </form>
+    <div id="spinner">
+      <img
+        src="img/output-onlinegiftools.gif"
+        alt="Loading..."
+        width="50"
+        height="50"
+      />
+    </div>
+    <p id="prediction-result" style="font-size: 20px"></p>
+    <script src="popup.js"></script>
+  </body>
+</html>
