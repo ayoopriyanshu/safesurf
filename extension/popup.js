@@ -43,7 +43,7 @@ form.addEventListener('submit', async (event) => {
         return;
       }
 
-      const response = await fetch('https://safesurf-flask.onrender.com/predict', {
+      const response = await fetch('https://safesurf-xjs8.onrender.com/predict', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
