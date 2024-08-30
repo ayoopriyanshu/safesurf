@@ -7,7 +7,7 @@ SafeSurf is a Flask-based Chrome extension designed to detect vulnerabilities in
 - **URL Vulnerability Detection**: Enter any URL to check for potential phishing or other vulnerabilities.
 - **Machine Learning Model**: Trained on the [Phishing Site URLs Kaggle dataset](https://www.kaggle.com/datasets/taruntiwarihp/phishing-site-urls).
 - **Chrome Extension**: A convenient browser extension to instantly check URLs from any webpage. The extension fetches data from the Flask app, which hosts the trained model.
-- **Flask App Deployed on Render**: Access the live application [Flask App](https://safesurf-flask.onrender.com/).
+- **Flask App Deployed on Render**: Access the live application [Flask App](https://safesurf-xjs8.onrender.com/).
 
 ## Screenshots
 
