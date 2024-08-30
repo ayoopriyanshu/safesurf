@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Anomaly Predictor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 id="head">Anomaly Detection</h1>
+    <form method="POST" action="/predict">
+        <label for="text" style="color: white;">Enter the website name:</label><br>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea> <br><br>
+        <button type="submit" style="font-family: 'Courier New', Courier, monospace;">Check</button>
+    </form>
+    <div id="spinner"></div>
+    <br>
+    <p><span id="prediction"></span></p>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('form').on('submit', function(event) {
+            event.preventDefault();
+            $('#spinner').show();
+            $('#prediction').text('');
+            setTimeout(function() {
+            var text = $('#text').val();
+            $.ajax({
+                type: 'POST',
+                url: '/predict',
+                contentType: 'application/json',
+                data: JSON.stringify({ text: text }),
+                success: function(data) {
+                    var prediction = data.prediction;
+                    $('#spinner').hide();
+                    if (prediction == 0) {
+                        $('#prediction').text('This site is safe to use.').addClass('result-safe').removeClass('result-unsafe');
+                    } else {
+                        $('#prediction').text('Your privacy and security might be at risk.').addClass('result-unsafe').removeClass('result-safe');
+                    }
+                }
+            });
+        }, 3000);
+        });
+    </script>
+</body>
+</html>

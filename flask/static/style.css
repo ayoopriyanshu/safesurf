@@ -1,0 +1,66 @@
+body {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family:monospace;
+    background: rgb(128,128,128);
+background: linear-gradient(90deg, rgba(128,128,128,1) 0%, rgba(0,0,0,1) 50%, rgba(128,128,128,1) 100%);
+}
+#head {
+    text-align: center;
+    font-size: 34px;
+    margin-bottom: 20px;
+    font-family:monospace;
+    color: white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 200px;
+}
+label {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+textarea {
+    height: 100px;
+    resize: none;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+button {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.result-safe {
+    color: green;
+}
+.result-unsafe {
+    color: red;
+}
+#spinner {
+    display: none;
+    margin: 20px auto;
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
